@@ -17,7 +17,7 @@ const Layout = () => {
       sx={{ background: theme.palette.grey[100], height: '100vh' }}
     >
       {!isLogging && <Navigation />}
-      <Container sx={{ py: 5 }}>
+      <Container maxWidth={'xl'} sx={{ py: 5 }}>
         <Outlet />
       </Container>
     </Stack>
