@@ -11,13 +11,13 @@ const Chart = ({data}) => {
         colors={[theme.palette.info.main, theme.palette.grey[400], theme.palette.grey[500]]}
         series={[
           {
-            innerRadius: 50,
+            innerRadius: 0,
             outerRadius: 100,
             data,
           },
         ]}
-        width={200}
-        height={200}
+        width={250}
+        height={250}
       />
     </Stack>
   );
