@@ -1,6 +1,4 @@
-import { Typography } from '@mui/material';
-import Paper from '@mui/material/Paper';
-import List from '@mui/material/List';
+import { Box, Typography, List } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import DaySummary from '../DaySummary/DaySummary';
 
@@ -38,14 +36,14 @@ const NestWeek = () => {
     },
   ];
   return (
-    <Paper elevation={4} sx={{ p: 4 }}>
+    <Box>
       <Typography variant="h5">Next 7 days</Typography>
       <List>
         {data.map((item) => (
           <DaySummary item={item} key={item.primaryLabel} />
         ))}
       </List>
-    </Paper>
+    </Box>
   );
 };
 

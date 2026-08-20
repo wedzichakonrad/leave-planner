@@ -1,5 +1,5 @@
 import Stack from '@mui/material/Stack';
-import { Calendar } from '../../components/Calendar/Calendar';
+import { LeaveCalendar } from '../../components/LeaveCalendar/LeaveCalendar';
 
 const Insights = () => {
   return (
@@ -10,7 +10,7 @@ const Insights = () => {
       justifyContent="center"
       sx={{ height: '100%' }}
     >
-      <Stack sx={{ height: '400px' }}>
+      {/* <Stack sx={{ height: '400px' }}>
         <Calendar />
       </Stack>
       <Stack sx={{ height: '400px' }}>
@@ -28,7 +28,7 @@ const Insights = () => {
 
       <Stack sx={{ height: '400px' }}>
         <Calendar />
-      </Stack>
+      </Stack> */}
     </Stack>
   );
 };

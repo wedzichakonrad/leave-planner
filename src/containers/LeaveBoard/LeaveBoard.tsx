@@ -1,10 +1,10 @@
 import Stack from '@mui/material/Stack';
-import { Calendar } from '../../components/Calendar/Calendar';
+import { LeaveCalendar } from '../../components/LeaveCalendar/LeaveCalendar';
 
 const LeaveBoard = () => {
   return (
     <Stack>
-      <Calendar />
+      <LeaveCalendar />
     </Stack>
   );
 };
