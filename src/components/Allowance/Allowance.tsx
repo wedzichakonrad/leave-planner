@@ -1,4 +1,3 @@
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Chart from '../Chart/Chart';
 import Breakdown from '../Breakdown/Breakdown';
@@ -11,12 +10,10 @@ const Allowance = () => {
   ];
 
   return (
-    <Paper elevation={4} sx={{p:4}}>
-      <Stack gap={4}>
-        <Chart data={data} />
-        <Breakdown data={data} />
-      </Stack>
-    </Paper>
+    <Stack gap={4}>
+      <Chart data={data} />
+      <Breakdown data={data} />
+    </Stack>
   );
 };
 

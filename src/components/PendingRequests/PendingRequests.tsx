@@ -1,4 +1,13 @@
-import { Typography, Paper, List, ListItem, ListItemText, Chip, Divider, Box } from '@mui/material';
+import {
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  Chip,
+  Divider,
+  Box,
+  Stack,
+} from '@mui/material';
 
 const PendingRequests = () => {
   const pendingRequests = [
@@ -7,31 +16,33 @@ const PendingRequests = () => {
       start_time: new Date('2026-05-10'),
       end_time: new Date('2026-05-15'),
       extra_notes: 'Holidays in the mountains.',
-      status: 'pending'
+      status: 'pending',
     },
     {
       request_type: 'sick_leave',
       start_time: new Date('2026-04-25'),
       end_time: new Date('2026-04-27'),
       extra_notes: 'Dentist visit.',
-      status: 'pending'
-    }
+      status: 'pending',
+    },
   ];
 
   return (
-    <Paper elevation={4} sx={{ p: 4, height: '100%' }}>
-      <Typography variant="h5" sx={{ mb: 2 }}>
-        Pending Requests
-      </Typography>
-      
+    <Stack gap={2}>
+      <Typography variant="h5">Pending Requests</Typography>
       <List>
         {pendingRequests.map((request, index) => (
           <Box key={index}>
-            <ListItem 
-              alignItems="flex-start" 
+            <ListItem
+              alignItems="flex-start"
               sx={{ px: 0, py: 2 }}
               secondaryAction={
-                <Chip label={request.status} color="warning" variant="outlined" size="small" />
+                <Chip
+                  label={request.status}
+                  color="warning"
+                  variant="outlined"
+                  size="small"
+                />
               }
             >
               <ListItemText
@@ -42,10 +53,20 @@ const PendingRequests = () => {
                 }
                 secondary={
                   <>
-                    <Typography component="span" variant="body2" color="text.primary" sx={{ display: 'block' }}>
-                      {request.start_time.toLocaleDateString()} - {request.end_time.toLocaleDateString()}
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      color="text.primary"
+                      sx={{ display: 'block' }}
+                    >
+                      {request.start_time.toLocaleDateString()} -{' '}
+                      {request.end_time.toLocaleDateString()}
                     </Typography>
-                    <Typography variant="caption" color="text.secondary" sx={{ fontStyle: 'italic' }}>
+                    <Typography
+                      variant="caption"
+                      color="text.secondary"
+                      sx={{ fontStyle: 'italic' }}
+                    >
                       "{request.extra_notes}"
                     </Typography>
                   </>
@@ -56,7 +77,7 @@ const PendingRequests = () => {
           </Box>
         ))}
       </List>
-    </Paper>
+    </Stack>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Typography, Paper, Stack, Box, LinearProgress } from '@mui/material';
+import { Typography, Stack, Box, LinearProgress } from '@mui/material';
 
 const LeaveStats = () => {
   const stats = [
@@ -8,7 +8,7 @@ const LeaveStats = () => {
   ];
 
   return (
-    <Paper elevation={4} sx={{ p: 4, height: '100%' }}>
+    <Box>
       <Typography variant="h5" sx={{ mb: 3 }}>
         Leave Statistics
       </Typography>
@@ -49,7 +49,7 @@ const LeaveStats = () => {
       <Typography variant="caption" sx={{ display: 'block', mt: 4, color: 'text.secondary', textAlign: 'center' }}>
         Based on your current employment contract
       </Typography>
-    </Paper>
+    </Box>
   );
 };
 
