@@ -1,0 +1,14 @@
+.fc-daygrid-day-events {
+  display: none !important;
+}
+
+.fc-daygrid-day-frame {
+  min-height: initial !important;
+  height: 100%;
+}
+
+.fc-daygrid-day-top {
+  display: block !important;
+  height: 100%;
+  width: 100%;
+}
